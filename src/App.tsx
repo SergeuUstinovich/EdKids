@@ -1,21 +1,21 @@
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import Test from './components/test/test'
-import { lazy, Suspense } from 'react'
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Test from "./components/test/test";
+import React, { lazy, Suspense } from "react";
 
-const Layout = lazy(() => import('./pages/Layout/Layout'))
+const Layout = lazy(() => import("./pages/Layout/Layout"));
 
 function App() {
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path={'/'} element={<Layout />} />
+          <Route path={"/"} element={<Layout />} />
         </Routes>
       </Suspense>
       {/* <Test /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
