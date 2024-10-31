@@ -1,16 +1,16 @@
 .btn {
-  font-family: 'PassionOne', Arial, sans-serif;
-  padding: 0;
+  font-family: "PassionOne", Arial, sans-serif;
   margin: 0;
   border: none;
-  background-color: transparent;
+  background-color: var(--primary-purple-btn);
   cursor: pointer;
   color: var(--primary-color);
-  
+  border-bottom: 4px solid var(--primary-dark-purple-btn);
+
   &:disabled {
-    background-color: var(--light-grey);
-    opacity: 0.5;
-    border-color: var(--grey);
+    color: var(--primary-color-disabled);
+    background-color: var(--primary-disabled);
+    border: none;
   }
 
   &[data-kind="secondary"] {

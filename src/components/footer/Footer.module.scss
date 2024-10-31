@@ -1,0 +1,17 @@
+.footer {
+  margin: 0 auto;
+  padding: 6px 10px 14px;
+  max-width: 375px;
+  border-top: 1px solid #38334a;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.footerList {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}

@@ -1,0 +1,17 @@
+.header {
+  margin: 0 auto;
+  padding: 24px 10px 6px;
+  max-width: 375px;
+  border-top: 1px solid #38334a;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.headerList {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}

@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
 import Test from "./components/test/test";
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 
 const Layout = lazy(() => import("./pages/Layout/Layout"));
 
