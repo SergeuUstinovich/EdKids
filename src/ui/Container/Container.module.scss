@@ -1,0 +1,24 @@
+.containerList {
+  margin-top: 4px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+
+  li {
+    &:first-child {
+      margin-right: 50px;
+    }
+
+    &:nth-child(2) {
+      margin-right: auto;
+    }
+  }
+
+  span {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--primary-color);
+  }
+}

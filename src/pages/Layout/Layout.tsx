@@ -2,20 +2,31 @@ import style from "./Layout.module.scss";
 import { Footer } from "../../components/footer";
 import { Header } from "../../components/header";
 import { Onboarding } from "../../components/onboarding/Onboarding";
-import { NavigationBar } from "../../ui/NavigationBar";
 import { classNames } from "../../utils/classNames";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { ShareModal } from "../../components/shareModal/ShareModal";
+import { GoodWorkModal } from "../../components/goodWorkModal/GoodWorkModal";
 
 const Layout = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") {
+      navigate("hero");
+    }
+  }, [location.pathname]);
+
   return (
-    <div className={classNames(style.main, {}, ["container"])}>
+    <div /* style={{ backgroundColor: "#241F36" }} */>
       <Header />
-      <Onboarding />
-      <NavigationBar
-        firstChild="первый элемент"
-        secondChild="второй элемент"
-        thirdChild="третий"
-        fourdChild="четвертый"
-      />
+      <main className={classNames(style.main, {}, ["container"])}>
+        <Outlet />
+        <Onboarding />
+        <ShareModal />
+        <GoodWorkModal />
+      </main>
       <Footer />
     </div>
   );

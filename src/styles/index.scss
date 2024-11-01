@@ -6,6 +6,18 @@
   --primary-color-disabled: #888888;
   --primary-input-border: #e2e2e2;
   --primary-input-fill: #f0f0f0;
+  --primary-blue-btn: #53adf0;
+  --primary-dark-blue-btn: #3c83b9;
+  --primary-dark-gray-btn: #bcbcbc;
+  --primary-hero-link-bg: #77c93c;
+  --primary-hero-link-border: #60a032;
+  --primary-light-green: #9ff164;
+  --primary-pink-container: #ca7cf3;
+  --primary-dark-pink: #9760b4;
+  --primary-gold: #f7ca45;
+  --primary-orange: #ffc565;
+  --primary-orange-text: #ef8929;
+  --primary-light-gold: #fff26d;
 }
 
 html {
@@ -19,6 +31,8 @@ html {
 }
 
 body {
+  margin: 0;
+  background-color: #f7f7f7;
   font-family: "Montserrat", sans-serif;
   min-width: 320px;
 }
@@ -40,6 +54,10 @@ ol {
 
 li {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {

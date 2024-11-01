@@ -1,0 +1,32 @@
+.navigationItem {
+  position: absolute;
+
+  &:first-child {
+    left: 27px;
+    top: 66px;
+  }
+
+  &:nth-child(2) {
+    left: 6px;
+    bottom: 176px;
+  }
+
+  &:nth-child(3) {
+    left: 47px;
+    bottom: 64px;
+  }
+
+  &:last-child {
+    left: 147px;
+    bottom: 16px;
+  }
+}
+
+.navigationLink {
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  border-radius: 100%;
+  border-bottom: 4px solid var(--primary-hero-link-border);
+  background-color: var(--primary-hero-link-bg);
+}

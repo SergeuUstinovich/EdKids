@@ -3,6 +3,7 @@ import style from "./Modal.module.scss";
 import Portal from "../Portal/Portal";
 import { classNames } from "../../utils/classNames";
 import { Button } from "../Button";
+import { CloseCrossSvg } from "../../assets/svg/CloseCrossSvg";
 // import { CloseCrossSvg } from "../../assets/svg/CloseCrossSvg";
 
 interface ModalProps {
@@ -12,6 +13,7 @@ interface ModalProps {
   lazy?: boolean;
   hiddenClose?: boolean;
   isSpecial?: boolean;
+  className?: string;
 }
 
 function Modal(props: ModalProps) {
@@ -21,6 +23,7 @@ function Modal(props: ModalProps) {
     onClose,
     lazy,
     isSpecial,
+    className,
     hiddenClose = false,
   } = props;
 
@@ -85,12 +88,12 @@ function Modal(props: ModalProps) {
 
   return (
     <Portal>
-      <div className={classNames(style.modal, mods)}>
+      <div className={classNames(style.modal, mods, [className])}>
         <div className={style.overlay} onClick={closeHandler}>
           <div className={style.content} onClick={onContentClick}>
             {hiddenClose && (
               <Button onClick={closeHandler} className={style.closeCross}>
-                {/* <CloseCrossSvg /> */}
+                <CloseCrossSvg />
               </Button>
             )}
             {children}

@@ -6,16 +6,19 @@ import { FooterHomeSvg } from "../../assets/svg/FooterHomeSvg";
 interface FooterProps {
   id: number;
   icon: any;
+  path: string;
 }
 
 const footerArr: FooterProps[] = [
   {
     id: 1,
     icon: <FooterHomeSvg />,
+    path: "hero",
   },
   {
     id: 2,
     icon: <FooterFriendsSvg />,
+    path: "friends",
   },
 ];
 
@@ -26,7 +29,7 @@ export const Footer = () => {
         <ul className={style.footerList}>
           {footerArr.map((item) => (
             <li key={item.id}>
-              <Link to={"/"}>{item.icon}</Link>
+              <Link to={item.path}>{item.icon}</Link>
             </li>
           ))}
         </ul>

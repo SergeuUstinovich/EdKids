@@ -15,7 +15,7 @@ export const Onboarding = () => {
   };
 
   return (
-    <Modal isSpecial isOpen={isOpen} onClose={handleClose}>
+    <Modal lazy isSpecial isOpen={isOpen} onClose={handleClose}>
       <div className={style.onboardingBlock}>
         <h1 className={style.onboardingTitle}>
           Добро пожаловать в приложение EdKids
