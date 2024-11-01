@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Test from "./components/test/test";
 import { lazy, Suspense } from "react";
+import { ShareModal } from "./components/shareModal/ShareModal";
 
 const Layout = lazy(() => import("./pages/Layout/Layout"));
 const Hero = lazy(() => import("./pages/Hero/Hero"));
@@ -20,7 +20,8 @@ function App() {
               <Route path={"lesson-1"} element={<Lesson1 />} />
             </Route>
             <Route path={"games"} element={<Games />} />
-            <Route path={"friends"} element={<Friends />} />
+            <Route path={"stats"} element={<Friends />} />
+            <Route path={"friends"} element={<ShareModal />} />
           </Route>
         </Routes>
       </Suspense>

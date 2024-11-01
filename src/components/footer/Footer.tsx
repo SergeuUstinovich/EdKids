@@ -1,6 +1,6 @@
 import style from "./Footer.module.scss";
 import { Link } from "react-router-dom";
-import { FooterFriendsSvg } from "../../assets/svg/FooterFriendsSvg";
+// import { FooterFriendsSvg } from "../../assets/svg/FooterFriendsSvg";
 import { FooterHomeSvg } from "../../assets/svg/FooterHomeSvg";
 
 interface FooterProps {
@@ -15,11 +15,11 @@ const footerArr: FooterProps[] = [
     icon: <FooterHomeSvg />,
     path: "hero",
   },
-  {
-    id: 2,
-    icon: <FooterFriendsSvg />,
-    path: "friends",
-  },
+  // {
+  //   id: 2,
+  //   icon: <FooterFriendsSvg />,
+  //   path: "friends",
+  // },
 ];
 
 export const Footer = () => {

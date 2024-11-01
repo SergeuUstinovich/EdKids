@@ -14,4 +14,19 @@
   display: flex;
   align-items: center;
   gap: 46px;
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    .descr {
+      margin-right: 5px;
+    }
+
+    .valueCoin {
+      
+    }
+  }
 }
+
+

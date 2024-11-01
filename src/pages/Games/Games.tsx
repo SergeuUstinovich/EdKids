@@ -7,7 +7,7 @@ const Games = () => {
   const navigate = useNavigate();
 
   const test = () => {
-    navigate("games-1");
+    navigate("#");
   };
 
   return (

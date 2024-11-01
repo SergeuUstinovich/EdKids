@@ -9,6 +9,7 @@ interface NavigationItem {
   path: string;
   classNameLink: any;
   classNameItem: any;
+  id: number
 }
 
 interface NavigationBarProps {
@@ -26,7 +27,7 @@ export const NavigationBar: React.FC<NavigationBarProps> = ({
     <div className={style.navigationBlock}>
       <ul className={style.navigationList}>
         {items.map((element) => (
-          <li className={element.classNameItem}>
+          <li key={element.id} className={element.classNameItem}>
             <Link className={element.classNameLink} to={element.path}>
               {element.label}
             </Link>

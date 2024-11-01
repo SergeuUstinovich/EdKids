@@ -1,18 +1,32 @@
 import style from "./ShareModal.module.scss";
 import { HeaderCoinSvg } from "../../assets/svg/HeaderCoinSvg";
 import Modal from "../../ui/Modal/Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FooterFriendsSvg } from "../../assets/svg/FooterFriendsSvg";
 import { ShareParentsSvg } from "../../assets/svg/ShareParentsSvg";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const ShareModal = () => {
-  const [openModal, setOpenModal] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  useEffect(() => {
+    if(location.pathname === '/friends') {
+      setOpenModal(true)
+    }
+  }, [])
+
+  const handleClose = () => {
+    setOpenModal(false)
+    navigate('/')
+  }
 
   return (
     <Modal
       lazy
       hiddenClose
-      onClose={() => setOpenModal(false)}
+      onClose={handleClose}
       className={style.modalShare}
       isOpen={openModal}
     >

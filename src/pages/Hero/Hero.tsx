@@ -14,27 +14,31 @@ const Hero = () => {
           classNameLink: style.navigationLink,
           label: <CoursesSvg />,
           path: "/courses",
+          id: 1,
         },
         {
           classNameItem: style.navigationItem,
           classNameLink: style.navigationLink,
           label: <GamesSvg />,
           path: "/games",
+          id: 2,
         },
         {
           classNameItem: style.navigationItem,
           classNameLink: style.navigationLink,
           label: <StatsSvg />,
           path: "/stats",
+          id: 3,
         },
         {
           classNameItem: style.navigationItem,
           classNameLink: style.navigationLink,
           label: <FriendsSvg />,
           path: "/friends",
+          id: 4,
         },
       ]}
-      sayHello="Hello, maksim"
+      sayHello="Hello, Maksim!"
     />
   );
 };

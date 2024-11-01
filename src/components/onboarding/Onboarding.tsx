@@ -39,7 +39,7 @@ export const Onboarding = () => {
               value={numberValue}
               onChange={(e: any) => setNumberValue(e.target.value)}
             />
-            <OnboardingArrowSvg />
+            <OnboardingArrowSvg className={style.svgArrow} />
           </FormField>
         </form>
         <Button

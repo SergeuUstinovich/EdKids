@@ -2,13 +2,29 @@ import style from "./GoodWorkModal.module.scss";
 import Modal from "../../ui/Modal/Modal";
 import goodWork from "../../assets/img/goodWork.png";
 import { Button } from "../../ui/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HeaderFireSvg } from "../../assets/svg/HeaderFireSvg";
 import { HeaderCoinSvg } from "../../assets/svg/HeaderCoinSvg";
 import { GoodEnergySvg } from "../../assets/svg/GoodEnergySvg";
+import { useNavigate } from "react-router-dom";
 
-export const GoodWorkModal = () => {
-  const [isOpen, setIsOpen] = useState(true);
+interface GoodWorkModalProps {
+  isSuccess: boolean
+}
+
+export const GoodWorkModal = ({isSuccess}: GoodWorkModalProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const nabigate = useNavigate()
+  const handleReturn = () => {
+    setIsOpen(false)
+    nabigate('/courses')
+  }
+
+  useEffect(() => {
+    if(isSuccess) {
+      setIsOpen(true)
+    }
+  }, [isSuccess])
 
   return (
     <Modal lazy isOpen={isOpen}>
@@ -35,7 +51,7 @@ export const GoodWorkModal = () => {
             </p>
           </li>
         </ul>
-        <Button onClick={() => setIsOpen(false)} className={style.goodWorkBtn}>
+        <Button onClick={handleReturn} className={style.goodWorkBtn}>
           Продолжить
         </Button>
       </div>

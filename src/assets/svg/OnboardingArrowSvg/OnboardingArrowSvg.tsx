@@ -1,6 +1,11 @@
-export const OnboardingArrowSvg = () => {
+interface OnboardingArrowSvgProps {
+  className?: string
+}
+
+export const OnboardingArrowSvg = ({className}: OnboardingArrowSvgProps) => {
   return (
     <svg
+    className={className}
       width="24"
       height="24"
       viewBox="0 0 24 24"

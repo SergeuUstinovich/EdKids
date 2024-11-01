@@ -12,10 +12,12 @@ const headerArr: HeaderProps[] = [
   {
     id: 1,
     icon: <HeaderCoinSvg />,
+    label: '100',
   },
   {
     id: 2,
     icon: <HeaderFireSvg />,
+    label: '5',
   },
 ];
 
@@ -24,9 +26,12 @@ export const Header = () => {
     <header className={style.header}>
       <ul className={style.headerList}>
         {headerArr.map((item) => (
-          <li key={item.id}>
+          <li className={style.item} key={item.id}>
+            <p className={style.descr}>
             {item.icon}
-            <span>{item.label}</span>
+            </p>
+            
+            <span className={style.valueCoin}>{item.label}</span>
           </li>
         ))}
       </ul>

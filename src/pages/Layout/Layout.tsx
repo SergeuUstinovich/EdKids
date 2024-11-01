@@ -5,8 +5,6 @@ import { Onboarding } from "../../components/onboarding/Onboarding";
 import { classNames } from "../../utils/classNames";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { ShareModal } from "../../components/shareModal/ShareModal";
-import { GoodWorkModal } from "../../components/goodWorkModal/GoodWorkModal";
 
 const Layout = () => {
   const navigate = useNavigate();
@@ -24,8 +22,6 @@ const Layout = () => {
       <main className={classNames(style.main, {}, ["container"])}>
         <Outlet />
         <Onboarding />
-        <ShareModal />
-        <GoodWorkModal />
       </main>
       <Footer />
     </div>
